@@ -1,4 +1,4 @@
-# Day 5 Part 1
+# Day 5
 
 import math
 
@@ -68,7 +68,7 @@ def find_seat(seats):
 
 def main():
     # Read input file
-    with open("./data.txt", "r") as f:
+    with open("./input.txt", "r") as f:
         data_list = f.read()
     
     data_list = data_list.split('\n')
