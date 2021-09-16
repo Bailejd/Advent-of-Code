@@ -1,10 +1,6 @@
-# Day 5
+# Day 5: Binary Boarding
 
 import math
-
-# Globals
-rows = 128
-columns = 8
 
 def get_seat(code):
     row = [0, 127]
@@ -54,7 +50,15 @@ def find_max_id(seats):
 
 
 def fill_seats(seats):
-    pass
+    plane = [[0]*8 for i in range(128)]
+
+    for i in range(len(seats)):
+        row = seats[i][0]
+        col = seats[i][1]
+
+        plane[row][col] = 1
+    
+    return plane
 
 
 def find_seat(seats):
@@ -63,7 +67,19 @@ def find_seat(seats):
 
     However some seats are missing from the front and back of the plane
     """
-    pass
+    plane = fill_seats(seats)
+
+    # Some seats in the front and back of the plane do not exist
+    # Set to True to signal beginning of seats that exist
+    exists = False
+
+    for i in range(len(plane)):
+        for j in range(len(plane[0])):
+            if(exists and plane[i][j] == 0):
+                your_id = i * 8 + j
+                return your_id
+            elif(not exists and plane[i][j] == 1):
+                exists = True
 
 
 def main():
@@ -78,10 +94,8 @@ def main():
     # Part 1: Find maximum id
     print(f'Max ID: {find_max_id(seats)}')
 
-    # Part 2: Find your seat
-    print(f'Your seat: {find_seat(seats)}')
-
-
+    # Part 2: Find your seat id
+    print(f'Your ID: {find_seat(seats)}')
 
 
 if __name__ == '__main__':
