@@ -1,4 +1,4 @@
-# Day 2
+# Day 2: Password Philosophy
 
 def part_one(array):
 	numValid = 0
