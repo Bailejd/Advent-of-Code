@@ -1,4 +1,4 @@
-# Day 4: Passport Processing
+# Day 12: Rain Risk
 
 def part_one(data_list):
     data_list = [(i[:1], int(i[1:])) for i in data_list]
