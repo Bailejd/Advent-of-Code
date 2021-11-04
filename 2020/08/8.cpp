@@ -32,17 +32,14 @@ int part_one(Node *head) {
                 temp = temp->next;
             }
             else if(temp->op == "jmp") {
-                // Instead of using another pointer I used variables since temp pointer is changing
                 std::string sign = temp->sign;
                 int num = temp->num;
                 temp->times_exe += 1;
                 for(int i = 0; i < num; i++) {
                     if(sign == "+") {
-                        // Might want error handling for if not NULL
                         temp = temp->next;
                     }
                     else if(sign == "-") {
-                        // Same
                         temp = temp->prev;
                     }
                     else {
@@ -99,7 +96,6 @@ int part_two(Node *head) {
                     temp = temp->next;
                 }
                 else if(temp->op == "jmp") {
-                    // Instead of using another pointer I used variables since temp pointer is changing
                     std::string sign = temp->sign;
                     int num = temp->num;
                     temp->times_exe += 1;
