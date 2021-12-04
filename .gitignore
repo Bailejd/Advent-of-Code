@@ -1,6 +1,12 @@
+# VS Code
+.vscode
+
 # notes/examples
 format.txt
 ex.txt
 
 # scripts
 /scripts
+
+# other
+a.out
