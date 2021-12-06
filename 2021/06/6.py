@@ -1,11 +1,10 @@
 # Day 6: Lanternfish
-
-def part_one(days, population):
-    for i in range(80):
+def calc_population(population, cycles):
+    for i in range(cycles):
         new_fish = 0
         temp_population = [0] * 9
         for idx, pop in enumerate(population):
-            if(days[idx] == 0):
+            if(idx == 0):
                 new_fish = pop
             else:
                 temp_population[idx-1] = pop
@@ -17,6 +16,10 @@ def part_one(days, population):
         population = temp_population
 
     return sum(population)
+    
+
+def part_one(population):
+    return calc_population(population, cycles=80)
 
 
 def part_two(data_list):
@@ -29,17 +32,16 @@ def main():
         data_list = f.read()
     
     data_list = [int(i) for i in data_list.split(',')]
-    days = [0,1,2,3,4,5,6,7,8]
     population = [0] * 9
     
-    for day in data_list:
-        population[day] += 1
+    for spawn_timer in data_list:
+        population[spawn_timer] += 1
 
     # Part 1
-    print(f'Part 1: {part_one(days, population)}')
+    print(f'Part 1: {part_one(population)}')
 
     # Part 2
-    print(f'Part 2: {part_two(days)}')
+    print(f'Part 2: {part_two(data_list)}')
 
 
 if __name__ == '__main__':
