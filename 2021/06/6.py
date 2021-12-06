@@ -1,4 +1,5 @@
 # Day 6: Lanternfish
+
 def calc_population(population, cycles):
     for i in range(cycles):
         new_fish = 0
@@ -16,7 +17,7 @@ def calc_population(population, cycles):
         population = temp_population
 
     return sum(population)
-    
+
 
 def part_one(population):
     return calc_population(population, cycles=80)
