@@ -22,8 +22,8 @@ def part_one(population):
     return calc_population(population, cycles=80)
 
 
-def part_two(data_list):
-    pass
+def part_two(population):
+    return calc_population(population, cycles=256)
 
 
 def main():
@@ -41,7 +41,7 @@ def main():
     print(f'Part 1: {part_one(population)}')
 
     # Part 2
-    print(f'Part 2: {part_two(data_list)}')
+    print(f'Part 2: {part_two(population)}')
 
 
 if __name__ == '__main__':
