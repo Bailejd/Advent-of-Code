@@ -1,4 +1,8 @@
 # Day 3: Binary Diagnostic
+#
+# Results
+# Part 1: 3912944
+# Part 2: 4996233
 
 def part_one(data_list, width, height):
     ones = [0] * width
@@ -13,7 +17,6 @@ def part_one(data_list, width, height):
                 zeros[i] += 1
     
     for i in range(width):
-        # Assuming number of ones never equals number of zeros
         if(ones[i] > zeros[i]):
             bin_list[i] = '1'
         else:
@@ -44,7 +47,7 @@ def oxygen_rating(data_list, height):
             else:
                 zeros += 1
         
-        if(ones > zeros or ones == zeros):
+        if(ones >= zeros):
             rating = '1'
         else:
             rating = '0'
@@ -96,9 +99,7 @@ def scrubber_rating(data_list, height):
 def main():
     # Read input file
     with open("./input.txt", "r") as f:
-        data_list = f.read()
-
-    data_list = data_list.split('\n')
+        data_list = f.read().split('\n')
 
     width = len(data_list[0])
     height = len(data_list)
