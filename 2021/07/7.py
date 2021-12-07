@@ -1,4 +1,8 @@
 # Day 7: The Treachery of Whales
+#
+# Results
+# Part 1: 347449
+# Part 2: 98039527
 
 from statistics import median, mean
 from math import ceil, floor
