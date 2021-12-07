@@ -1,4 +1,8 @@
 # Day 1: Sonar Sweep
+#
+# Results
+# Part 1: 1139
+# Part 2: 1103
 
 def part_one(data_list):
     incr = 0
@@ -27,10 +31,7 @@ def part_two(data_list):
 def main():
     # Read input file
     with open("./input.txt", "r") as f:
-        data_list = f.read()
-    
-    data_list = data_list.split('\n')
-    data_list = [int(i) for i in data_list]
+        data_list = [int(i) for i in f.read().split('\n')]
 
     # Part 1
     print(f'Part 1: {part_one(data_list)}')

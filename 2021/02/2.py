@@ -1,4 +1,8 @@
 # Day 2: Dive!
+#
+# Results
+# Part 1: 1499229
+# Part 2: 1340836560
 
 def part_one(data_list):
     horizonal = 0
@@ -40,9 +44,7 @@ def part_two(data_list):
 def main():
     # Read input file
     with open("./input.txt", "r") as f:
-        data_list = f.read()
-    
-    data_list = data_list.split('\n')
+        data_list = f.read().split('\n')
 
     # Part 1
     print(f'Part 1: {part_one(data_list)}')

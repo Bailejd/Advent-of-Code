@@ -1,4 +1,8 @@
 # Day 6: Lanternfish
+#
+# Results
+# Part 1: 391888
+# Part 2: 1754597645339
 
 def calc_population(population, cycles):
     for i in range(cycles):
@@ -30,9 +34,8 @@ def part_two(population):
 def main():
     # Read input file
     with open("./input.txt", "r") as f:
-        data_list = f.read()
+        data_list = [int(i) for i in f.read().split(',')]
     
-    data_list = [int(i) for i in data_list.split(',')]
     population = [0] * 9
     
     for spawn_timer in data_list:
