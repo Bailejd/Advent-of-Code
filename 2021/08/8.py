@@ -34,7 +34,7 @@ def find_easy_digits(right, decoded):
         # Find 7, Only digit made of 3 segments
         elif(val_length == 3):
             decoded[7] = val
-        # Find 8, Only digit made with 7 segments
+        # Find 8, Only digit made of 7 segments
         elif(val_length == 7):
             decoded [8] = val
 
