@@ -60,7 +60,7 @@ def part_two(data_list):
         right, left = line.split(' | ')
         right, left = right.split(' '), left.split(' ')
 
-        # Create lists based on length coded number
+        # Create lists based on length of coded number
         len_6 = [num for num in right if len(num) == 6]
         len_5 = [num for num in right if len(num) == 5]
 
