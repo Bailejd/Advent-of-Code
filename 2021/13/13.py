@@ -55,7 +55,7 @@ def part_one(data, folds):
         if(i == 0):
             first_fold_sum = points.sum()
     
-    # Return first_fold_sum for part one and points for part 2
+    # Return first_fold_sum for part 1 and points for part 2
     return first_fold_sum, points
 
 
