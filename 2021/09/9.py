@@ -7,7 +7,6 @@
 import numpy as np
 from collections import deque
 
-
 def check(data_list, x, y):
     check_pos = [[x,y+1],[x+1,y],[x,y-1],[x-1,y]]
 
@@ -30,6 +29,7 @@ def valid(low_points, x, y):
         return False
     
     return True
+
 
 def bfs(data_list, low_points, coord):
     basin_size = 1
