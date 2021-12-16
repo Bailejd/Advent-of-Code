@@ -7,10 +7,6 @@
 import numpy as np
 from collections import deque
 
-def format_print(data_list):
-    for line in data_list:
-        print(line)
-
 
 def check(data_list, x, y):
     check_pos = [[x,y+1],[x+1,y],[x,y-1],[x-1,y]]
