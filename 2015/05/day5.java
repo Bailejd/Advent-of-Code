@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 public class day5 {
@@ -63,6 +64,53 @@ public class day5 {
         }
     }
 
+    public static class BetterNiceString {
+        private String string;
+        private boolean isNice;
+        private boolean pairRepeats;
+        private boolean letterRepeatsSeperatedByOne;
+
+        public BetterNiceString(String s) {
+            this.string = s;
+            this.isNice = false;
+            this.pairRepeats = false;
+            this.letterRepeatsSeperatedByOne = false;
+
+            checkNice(string);
+        }
+
+        private void checkNice(String s) {
+            char last = '-';
+            HashMap<String, Integer> map = new HashMap<>();
+
+            for(int i = 1; i < s.length(); i++) {
+                char curr = s.charAt(i);
+                char prev = s.charAt(i-1);
+                String key = new StringBuilder().append(prev).append(curr).toString();
+
+                if(map.containsKey(key) && map.get(key) != i-1) {
+                    map.put(key, i);
+                    this.pairRepeats = true;
+                }
+                else if(!map.containsKey(key)) map.put(key, i);
+
+                if(last != '-') {
+                    if(last == curr) {
+                        this.letterRepeatsSeperatedByOne = true;
+                    }
+                }
+
+                last = prev;
+            }
+
+            if(this.pairRepeats && this.letterRepeatsSeperatedByOne) this.isNice = true;
+        }
+
+        public boolean getIsNice() {
+            return this.isNice;
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         String[] inputData = readInput();
         System.out.println(part1(inputData));
@@ -81,6 +129,10 @@ public class day5 {
 
     private static int part2(String[] inputData) throws Exception {
         int total = 0;
+
+        for(int i = 0; i < inputData.length; i++) {
+            if(new BetterNiceString(inputData[i]).getIsNice()) total += 1;
+        }
 
         return total;
     }
