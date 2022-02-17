@@ -2,7 +2,7 @@
 //
 // Results
 // Part 1: 236
-// Part 2:
+// Part 2: 51
 
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
