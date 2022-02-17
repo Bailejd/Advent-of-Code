@@ -1,3 +1,9 @@
+// Day 5: Doesn't He Have Intern-Elves For This?
+//
+// Results
+// Part 1: 236
+// Part 2:
+
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;

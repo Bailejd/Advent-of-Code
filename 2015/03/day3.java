@@ -1,3 +1,9 @@
+// Day 3: Perfectly Spherical Houses in a Vacuum
+//
+// Results
+// Part 1: 2572
+// Part 2: 2631
+
 import java.util.HashMap;
 import java.util.Objects;
 import java.nio.file.Files;

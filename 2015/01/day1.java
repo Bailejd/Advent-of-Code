@@ -1,3 +1,9 @@
+// Day 1: Not Quite Lisp
+//
+// Results
+// Part 1: 74
+// Part 2: 1795
+
 import java.nio.file.Files;
 import java.nio.file.Paths;
 

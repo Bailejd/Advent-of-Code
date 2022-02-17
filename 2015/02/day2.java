@@ -1,3 +1,9 @@
+// Day 2: I Was Told There Would Be No Math
+//
+// Results
+// Part 1: 1606483
+// Part 2: 3842356
+
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
