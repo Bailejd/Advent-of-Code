@@ -68,13 +68,13 @@ public class day5 {
         private String string;
         private boolean isNice;
         private boolean pairRepeats;
-        private boolean letterRepeatsSeperatedByOne;
+        private boolean letterRepeatsSeparatedByOne;
 
         public BetterNiceString(String s) {
             this.string = s;
             this.isNice = false;
             this.pairRepeats = false;
-            this.letterRepeatsSeperatedByOne = false;
+            this.letterRepeatsSeparatedByOne = false;
 
             checkNice(string);
         }
@@ -96,14 +96,14 @@ public class day5 {
 
                 if(last != '-') {
                     if(last == curr) {
-                        this.letterRepeatsSeperatedByOne = true;
+                        this.letterRepeatsSeparatedByOne = true;
                     }
                 }
 
                 last = prev;
             }
 
-            if(this.pairRepeats && this.letterRepeatsSeperatedByOne) this.isNice = true;
+            if(this.pairRepeats && this.letterRepeatsSeparatedByOne) this.isNice = true;
         }
 
         public boolean getIsNice() {
